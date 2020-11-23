@@ -1,0 +1,11 @@
+@use "../../../assets/styles/variables/colors" as color;
+
+footer {
+  margin-top: 2rem;
+  width: 100%;
+  height: 8rem;
+  padding: 1rem 0;
+  color: color.$footer-fg;
+  background: color.$footer-bg;
+  box-sizing: border-box;
+}

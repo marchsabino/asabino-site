@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  // this is the size of the navigation bar
+  margin-top: 56px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+.btn {
+  &:focus {
+    box-shadow: none;
+  }
+}

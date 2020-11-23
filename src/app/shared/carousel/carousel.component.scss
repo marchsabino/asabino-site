@@ -1,0 +1,30 @@
+.carousel {
+  max-height: 25rem;
+  margin-bottom: 1rem;
+
+  @media screen and (max-width: 767px) {
+    max-height: 10rem;
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    max-height: 20rem;
+  }
+
+  img {
+    height: 25rem;
+
+    @media screen and (max-width: 767px) {
+      max-height: 10rem;
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      max-height: 20rem;
+    }
+  }
+
+  .carousel-caption {
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0.33rem;
+  }
+}

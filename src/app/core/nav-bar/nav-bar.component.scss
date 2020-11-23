@@ -1,0 +1,32 @@
+@use '../../../assets/styles/variables/colors' as color;
+
+.navbar {
+  background: white;
+  border-bottom: 1px solid rgb(226, 226, 226);
+
+  .navbar-toggler {
+    padding-right: 0;
+    border: 0;
+
+    &:active,
+    &:focus {
+      outline: 0;
+      box-shadow: none;
+    }
+  }
+
+  .navbar-brand {
+    color: #222;
+  }
+}
+
+.btn-contact-us {
+  color: #f1f1f1;
+  background: color.$theme;
+  transition: background 0.25s ease;
+
+  &:hover,
+  &:active {
+    background: darken(color.$theme, 8);
+  }
+}
