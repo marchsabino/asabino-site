@@ -13,6 +13,20 @@ h6 {
   font-weight: bold;
 }
 
+h1 {
+  font-size: 2rem;
+  line-height: 2rem;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+  }
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
 .btn {
   &:focus {
     box-shadow: none;
