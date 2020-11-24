@@ -22,9 +22,8 @@
 }
 
 .btn-contact-us {
-  color: color.$theme;
-  background: white;
-  border: 1px solid color.$theme;
+  color: white;
+  background: color.$theme;
   transition: all 0.25s ease;
 
   &:hover,
