@@ -5,39 +5,21 @@
     <li data-target="#carousel" data-slide-to="2"></li>
   </ol>
   <div class="carousel-inner">
-    <div class="carousel-item active" data-interval="5000">
-      <img
-        src="https://images8.alphacoders.com/489/thumb-1920-489272.jpg"
-        class="d-block w-100"
-        alt="First slide"
-      />
-      <div class="carousel-caption d-none d-md-block">
-        <h5>First Slide</h5>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    <ng-container *ngFor="let item of carouselItems">
+      <div
+        [ngClass]="{ 'carousel-item': true, active: item.active }"
+        data-interval="5000"
+      >
+        <img [src]="item.image" class="d-block w-100" [alt]="item.title" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>{{ title }}</h5>
+          <p>
+            We specialize in Painting, Tile, Carpentry, Kitchen & Bath Remodels,
+            Water & Fire Restoration and More.
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="carousel-item" data-interval="5000">
-      <img
-        src="https://www.androidguys.com/wp-content/uploads/2015/11/milky_way_sky-wide-1024x640.jpg"
-        class="d-block w-100"
-        alt="Second slide"
-      />
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second Slide</h5>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-      </div>
-    </div>
-    <div class="carousel-item" data-interval="5000">
-      <img
-        src="https://wallpapercave.com/wp/wp2124316.jpg"
-        class="d-block w-100"
-        alt="Third slide"
-      />
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third Slide</h5>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-      </div>
-    </div>
+    </ng-container>
   </div>
   <a
     class="carousel-control-prev"
