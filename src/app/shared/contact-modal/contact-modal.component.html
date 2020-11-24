@@ -20,16 +20,18 @@
         </button>
       </div>
       <div class="modal-body">
-        <strong>Phone Number: </strong>
-        <a [href]="'tel:' + phoneNumberRaw" itemprop="telephone">{{
-          phoneNumber
-        }}</a>
-        <p>
+        <h6>
+          <strong>Phone Number: </strong>
+          <a [href]="'tel:' + phoneNumberRaw" itemprop="telephone">{{
+            phoneNumber
+          }}</a>
+        </h6>
+        <h6>
           <strong>Email: </strong>
           <a [href]="'mailto:' + emailAddress" itemprop="email">{{
             emailAddress
           }}</a>
-        </p>
+        </h6>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">

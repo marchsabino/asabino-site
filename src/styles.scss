@@ -1,4 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+@use './assets/styles/variables/colors' as color;
+
 body {
   // this is the size of the navigation bar
   margin-top: 56px;
@@ -37,4 +38,16 @@ button,
 
 .container {
   max-width: 968px;
+}
+
+a {
+  &:link,
+  &:visited,
+  &:active {
+    color: color.$theme;
+  }
+
+  &:hover {
+    color: darken(color.$theme, 8);
+  }
 }
