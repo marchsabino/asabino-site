@@ -10,6 +10,7 @@ import { AppConstants } from 'src/assets/config/AppConstants';
 export class ContactModalComponent implements OnInit {
   phoneNumber = AppConstants.PHONE_NUMBER;
   phoneNumberRaw = AppConstants.PHONE_NUMBER_RAW;
+  emailAddress = AppConstants.EMAIL_ADDRESS;
 
   constructor() {}
 

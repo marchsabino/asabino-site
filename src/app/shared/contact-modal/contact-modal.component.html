@@ -24,6 +24,12 @@
         <a [href]="'tel:' + phoneNumberRaw" itemprop="telephone">{{
           phoneNumber
         }}</a>
+        <p>
+          <strong>Email: </strong>
+          <a [href]="'mailto:' + emailAddress" itemprop="email">{{
+            emailAddress
+          }}</a>
+        </p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">

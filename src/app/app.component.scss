@@ -1,6 +1,26 @@
+@use '../assets/styles/variables/colors' as color;
+
 main {
   // 100vh - nav bar - footer
   min-height: calc(100vh - 56px - 10rem);
   padding-top: 1rem;
   box-sizing: border-box;
+
+  .slogan-container {
+    margin-bottom: 1rem;
+
+    h2.slogan {
+      color: color.$slogan;
+    }
+
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      h2.slogan {
+        font-size: 1.25rem;
+      }
+    }
+  }
 }

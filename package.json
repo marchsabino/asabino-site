@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --base-href=/asabino-site/",
-    "deploy": "npm run build && npx angular-cli-ghpages --dir=dist/asabino",
+    "build": "ng build --prod",
+    "deploy": "npm run build && npx angular-cli-ghpages --dir=dist/asabino --cname=asabino.com",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
