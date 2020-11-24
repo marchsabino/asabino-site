@@ -22,12 +22,14 @@
 }
 
 .btn-contact-us {
-  color: #f1f1f1;
-  background: color.$theme;
-  transition: background 0.25s ease;
+  color: color.$theme;
+  background: white;
+  border: 1px solid color.$theme;
+  transition: all 0.25s ease;
 
   &:hover,
   &:active {
+    color: white;
     background: darken(color.$theme, 8);
   }
 }
