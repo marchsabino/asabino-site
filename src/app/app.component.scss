@@ -10,12 +10,25 @@ main {
     margin-bottom: 1rem;
 
     h2.slogan {
-      color: color.$slogan;
+      color: color.$theme;
     }
 
     @media screen and (max-width: 768px) {
       h2.slogan {
         font-size: 1.1rem;
+      }
+    }
+  }
+
+  .specialize {
+    margin: auto;
+
+    @media screen and (max-width: 768px) {
+      width: 70%;
+
+      ul {
+        margin: auto;
+        padding: 0;
       }
     }
   }

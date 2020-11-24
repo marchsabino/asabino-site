@@ -5,7 +5,42 @@
     <h2 class="slogan">{{ slogan | titlecase }}</h2>
   </div>
   <app-carousel></app-carousel>
-  We are a small contracting company in Meriden, CT.
+
+  <!-- CONTENT -->
+  We are a contracting company serving Connecticut. With over XX years
+  experience, we can help you improve your home. There's no job too big, and no
+  job too small. We specialize in the following areas:
+
+  <div class="specialize row mt-3 font-weight-bold">
+    <div class="col-sm-4 col-6">
+      <ul>
+        <li>Painting</li>
+        <li>Tile</li>
+        <li>Carpentry</li>
+        <li><span class="d-none d-sm-inline">Laminate</span> Flooring</li>
+      </ul>
+    </div>
+    <div class="col-sm-4 col-6">
+      <ul>
+        <li>Kitchen <span class="d-none d-md-inline">Remodels</span></li>
+        <li>Bathroom <span class="d-none d-md-inline">Remodels</span></li>
+        <li>Countertops</li>
+        <li>
+          <span class="d-none d-sm-inline">Electrical</span>
+          <span class="d-inline d-sm-none">and More!</span>
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-4 col-6 d-none d-sm-inline-block">
+      <ul>
+        <li>Windows & Doors</li>
+        <li>Fire Restoration</li>
+        <li>Plumbing</li>
+        <li>Water Restoration</li>
+      </ul>
+    </div>
+  </div>
+  <!-- END OF CONTENT -->
   <app-gallery></app-gallery>
 </main>
 <app-footer></app-footer>
