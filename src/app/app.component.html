@@ -5,12 +5,17 @@
     <h2 class="slogan">{{ slogan | titlecase }}</h2>
   </div>
   <app-carousel></app-carousel>
-
+  <!-- MISSION STATEMENT -->
+  <h5 class="mission">
+    Our Mission is to be the industry leader in Connecicut; not only meeting our
+    client's expectations, but to exceed them.
+  </h5>
   <!-- CONTENT -->
-  We are a contracting company serving Connecticut. With over XX years
-  experience, we can help you improve your home. There's no job too big, and no
-  job too small. We specialize in the following areas:
-
+  <p>
+    We are a Home Improvement company serving all of Connecticut, with over 30
+    years of experience in the home improvement industry. We specialize in the
+    following areas:
+  </p>
   <div class="specialize row mt-3 font-weight-bold">
     <div class="col-sm-4 col-6">
       <ul>
@@ -18,6 +23,10 @@
         <li>Tile</li>
         <li>Carpentry</li>
         <li><span class="d-none d-sm-inline">Laminate</span> Flooring</li>
+        <div class="d-block d-sm-none">
+          <li>Windows & Doors</li>
+          <li>Plumbing</li>
+        </div>
       </ul>
     </div>
     <div class="col-sm-4 col-6">
@@ -25,23 +34,23 @@
         <li>Kitchen <span class="d-none d-md-inline">Remodels</span></li>
         <li>Bathroom <span class="d-none d-md-inline">Remodels</span></li>
         <li>Countertops</li>
-        <li>
-          <span class="d-none d-sm-inline">Electrical</span>
-          <span class="d-inline d-sm-none">and More!</span>
-        </li>
+        <li>Electrical</li>
+        <div class="d-block d-sm-none">
+          <li>Fire & Water Restoration</li>
+          <li>Basements</li>
+        </div>
       </ul>
     </div>
     <div class="col-sm-4 col-6 d-none d-sm-inline-block">
       <ul>
         <li>Windows & Doors</li>
-        <li>Fire Restoration</li>
         <li>Plumbing</li>
-        <li>Water Restoration</li>
+        <li>Fire & Water Restoration</li>
+        <li>Basements</li>
       </ul>
     </div>
   </div>
   <!-- END OF CONTENT -->
-
   <app-gallery></app-gallery>
 </main>
 <app-footer></app-footer>

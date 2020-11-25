@@ -7,6 +7,8 @@ import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 import { ViewsModule } from './views/views.module';
 import { NgxBootstrapIconsModule, allIcons } from 'ngx-bootstrap-icons';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +18,9 @@ import { NgxBootstrapIconsModule, allIcons } from 'ngx-bootstrap-icons';
     SharedModule,
     CoreModule,
     ViewsModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     NgxBootstrapIconsModule.pick(allIcons),
   ],
   providers: [],

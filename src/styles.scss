@@ -51,3 +51,20 @@ a {
     color: darken(color.$theme, 8);
   }
 }
+
+.btn-submit {
+  color: white;
+  background: color.$theme;
+  transition: all 0.25s ease;
+
+  &:hover,
+  &:active {
+    color: white;
+    background: darken(color.$theme, 8);
+  }
+
+  &:disabled {
+    color: white;
+    background: color.$theme;
+  }
+}
