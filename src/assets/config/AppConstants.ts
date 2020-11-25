@@ -1,3 +1,5 @@
+import { environment } from 'src/environments/environment';
+
 export class AppConstants {
   static readonly PHONE_NUMBER = '(203) 901-7589';
   static readonly PHONE_NUMBER_RAW = '2039017589';
@@ -6,4 +8,12 @@ export class AppConstants {
   static readonly SHORT_NAME = 'All Aspects';
   static readonly FULL_NAME = 'All Aspects Home Improvement';
   static readonly SLOGAN = 'No job too big, no job too small!';
+
+  static getApiEndpoint(): string {
+    if (environment.production) {
+      return 'https://api.asabino.com:8080';
+    } else {
+      return 'http://localhost:3000';
+    }
+  }
 }
