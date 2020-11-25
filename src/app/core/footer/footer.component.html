@@ -4,6 +4,12 @@
       <div class="col-lg-12 d-block text-center">
         Fully Licensed and Insured
         <p>License Number: {{ licenseNum }}</p>
+        <p>
+          Get a Free Quote by calling us at
+          <a [href]="'tel:' + phoneNumberRaw" itemprop="telephone">{{
+            phoneNumber
+          }}</a>
+        </p>
       </div>
     </div>
   </div>

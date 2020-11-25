@@ -8,6 +8,8 @@ import { AppConstants } from 'src/assets/config/AppConstants';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FooterComponent implements OnInit {
+  phoneNumber = AppConstants.PHONE_NUMBER;
+  phoneNumberRaw = AppConstants.PHONE_NUMBER_RAW;
   licenseNum = AppConstants.LICENSE_NUMBER;
 
   constructor() {}

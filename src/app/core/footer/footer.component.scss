@@ -8,4 +8,13 @@ footer {
   color: color.$footer-fg;
   background: color.$footer-bg;
   box-sizing: border-box;
+
+  a {
+    &:link,
+    &:active,
+    &:visited {
+      color: white;
+      text-decoration: underline;
+    }
+  }
 }
