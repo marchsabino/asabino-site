@@ -11,8 +11,8 @@ export class CarouselComponent implements OnInit {
   title = AppConstants.FULL_NAME;
   carouselItems = [
     {
-      image: '../../../assets/images/carousel-3.jpg',
-      title: 'Chicken Coup',
+      image: '../../../assets/images/carousel-4.jpg',
+      title: 'Truck',
       description: 'Hello World',
       active: true,
     },
