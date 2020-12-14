@@ -132,12 +132,12 @@ interface Gallery {
 }
 
 enum FilterType {
-  ALL,
-  PAINTING,
-  TILE,
-  CARPENTRY,
-  BATHROOMS,
-  KITCHENS,
-  DECKS,
-  BASEMENTS,
+  ALL = 'All',
+  PAINTING = 'Painting',
+  TILE = 'Tile',
+  CARPENTRY = 'Carpentry',
+  BATHROOMS = 'Bathrooms',
+  KITCHENS = 'Kitchens',
+  DECKS = 'Decks',
+  BASEMENTS = 'Basements',
 }
