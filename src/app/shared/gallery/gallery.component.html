@@ -1,5 +1,68 @@
 <div id="gallery" class="gallery-container">
   <h1>Gallery</h1>
+  <div class="nav nav-pills nav-justified">
+    <a
+      [ngClass]="{ 'nav-link': true, active: currentFilter === filterType.ALL }"
+      (click)="filter(filterType.ALL)"
+      >All</a
+    >
+    <a
+      [ngClass]="{
+        'nav-link': true,
+        active: currentFilter === filterType.PAINTING
+      }"
+      (click)="filter(filterType.PAINTING)"
+      >Painting</a
+    >
+    <a
+      [ngClass]="{
+        'nav-link': true,
+        active: currentFilter === filterType.TILE
+      }"
+      (click)="filter(filterType.TILE)"
+      >Tile</a
+    >
+    <a
+      [ngClass]="{
+        'nav-link': true,
+        active: currentFilter === filterType.CARPENTRY
+      }"
+      (click)="filter(filterType.CARPENTRY)"
+      >Carpentry</a
+    >
+    <a
+      [ngClass]="{
+        'nav-link': true,
+        active: currentFilter === filterType.BATHROOMS
+      }"
+      (click)="filter(filterType.BATHROOMS)"
+      >Bathrooms</a
+    >
+    <a
+      [ngClass]="{
+        'nav-link': true,
+        active: currentFilter === filterType.KITCHENS
+      }"
+      (click)="filter(filterType.KITCHENS)"
+      >Kitchens</a
+    >
+    <a
+      [ngClass]="{
+        'nav-link': true,
+        active: currentFilter === filterType.DECKS
+      }"
+      (click)="filter(filterType.DECKS)"
+      >Decks</a
+    >
+    <a
+      [ngClass]="{
+        'nav-link': true,
+        active: currentFilter === filterType.BASEMENTS
+      }"
+      (click)="filter(filterType.BASEMENTS)"
+      >Basements</a
+    >
+  </div>
   <div class="row">
     <div class="col-3" *ngFor="let image of gallery.row1">
       <button

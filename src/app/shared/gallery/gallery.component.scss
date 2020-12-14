@@ -3,6 +3,19 @@
 .gallery-container {
   margin: 1.5rem 0;
 
+  .nav {
+    margin-bottom: 1rem;
+
+    .nav-link {
+      color: color.$theme;
+
+      &.active {
+        color: white;
+        background: color.$theme;
+      }
+    }
+  }
+
   h1 {
     margin-bottom: 1.5rem;
   }

@@ -12,6 +12,8 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GalleryComponent implements OnInit {
+  filterType = FilterType;
+  currentFilter = FilterType.ALL;
   currentImage = null;
   previousImage = 0;
   nextImage = 0;
@@ -24,22 +26,23 @@ export class GalleryComponent implements OnInit {
 
   images: GalleryImage[] = [
     {
-      tag: 'painting',
+      tag: FilterType.PAINTING,
       src: '../../../assets/images/carousel-1.jpg',
       caption: 'A porch that was painted',
     },
-    { tag: 'painting', src: '../../../assets/images/carousel-2.jpg' },
-    { tag: 'painting', src: '../../../assets/images/carousel-2.jpg' },
-    { tag: 'painting', src: '../../../assets/images/carousel-1.jpg' },
-    { tag: 'painting', src: '../../../assets/images/carousel-3.jpg' },
-    { tag: 'painting', src: '../../../assets/images/carousel-2.jpg' },
-    { tag: 'painting', src: '../../../assets/images/carousel-3.jpg' },
-    { tag: 'painting', src: '../../../assets/images/carousel-1.jpg' },
-    { tag: 'painting', src: '../../../assets/images/carousel-3.jpg' },
-    { tag: 'painting', src: '../../../assets/images/carousel-1.jpg' },
-    { tag: 'painting', src: '../../../assets/images/carousel-2.jpg' },
-    { tag: 'painting', src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.PAINTING, src: '../../../assets/images/carousel-2.jpg' },
+    { tag: FilterType.CARPENTRY, src: '../../../assets/images/carousel-2.jpg' },
+    { tag: FilterType.CARPENTRY, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.CARPENTRY, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.CARPENTRY, src: '../../../assets/images/carousel-2.jpg' },
+    { tag: FilterType.CARPENTRY, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.CARPENTRY, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.PAINTING, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.PAINTING, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.PAINTING, src: '../../../assets/images/carousel-2.jpg' },
+    { tag: FilterType.PAINTING, src: '../../../assets/images/carousel-1.jpg' },
   ];
+  filteredImages: GalleryImage[];
 
   constructor() {
     this.gallery.row1 = this.images.slice(0, 4);
@@ -55,6 +58,12 @@ export class GalleryComponent implements OnInit {
     this.currentImage = image;
     this.previousImage = this.getPreviousImage(image);
     this.nextImage = this.getNextImage(image);
+  }
+
+  updateGallery(images: GalleryImage[]): void {
+    this.gallery.row1 = images.slice(0, 4);
+    this.gallery.row2 = images.slice(4, 8);
+    this.gallery.row3 = images.slice(8, 12);
   }
 
   assignIndexes(): void {
@@ -85,6 +94,14 @@ export class GalleryComponent implements OnInit {
     }
   }
 
+  filter(type: FilterType): void {
+    const filteredImages = this.images.filter((t) => {
+      return t.tag === type || type == FilterType.ALL;
+    });
+    this.currentFilter = type;
+    this.updateGallery(filteredImages);
+  }
+
   @HostListener('document:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
     switch (event.key) {
@@ -102,7 +119,7 @@ export class GalleryComponent implements OnInit {
 
 interface GalleryImage {
   index?: number;
-  tag: 'painting';
+  tag: FilterType;
   src: string;
   title?: string;
   caption?: string;
@@ -112,4 +129,15 @@ interface Gallery {
   row1: GalleryImage[];
   row2: GalleryImage[];
   row3: GalleryImage[];
+}
+
+enum FilterType {
+  ALL,
+  PAINTING,
+  TILE,
+  CARPENTRY,
+  BATHROOMS,
+  KITCHENS,
+  DECKS,
+  BASEMENTS,
 }
