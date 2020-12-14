@@ -48,6 +48,7 @@ export class GalleryComponent implements OnInit {
     this.gallery.row1 = this.images.slice(0, 4);
     this.gallery.row2 = this.images.slice(4, 8);
     this.gallery.row3 = this.images.slice(8, 12);
+    this.filteredImages = this.images;
 
     this.assignIndexes();
   }
@@ -67,27 +68,31 @@ export class GalleryComponent implements OnInit {
   }
 
   assignIndexes(): void {
-    this.images.forEach((image, index) => (image.index = index));
+    this.filteredImages.forEach((image, index) => (image.index = index));
   }
 
   goToNextImage(): void {
-    this.currentImage = this.images[this.getNextImage(this.currentImage)];
+    this.currentImage = this.filteredImages[
+      this.getNextImage(this.currentImage)
+    ];
   }
 
   goToPrevImage(): void {
-    this.currentImage = this.images[this.getPreviousImage(this.currentImage)];
+    this.currentImage = this.filteredImages[
+      this.getPreviousImage(this.currentImage)
+    ];
   }
 
   getPreviousImage(image: GalleryImage): number {
     if (image.index > 0) {
       return image.index - 1;
     } else {
-      return this.images.length - 1;
+      return this.filteredImages.length - 1;
     }
   }
 
   getNextImage(image: GalleryImage): number {
-    if (image.index + 1 >= this.images.length) {
+    if (image.index + 1 >= this.filteredImages.length) {
       return 0;
     } else {
       return image.index + 1;
@@ -95,11 +100,12 @@ export class GalleryComponent implements OnInit {
   }
 
   filter(type: FilterType): void {
-    const filteredImages = this.images.filter((t) => {
+    this.filteredImages = this.images.filter((t) => {
       return t.tag === type || type == FilterType.ALL;
     });
     this.currentFilter = type;
-    this.updateGallery(filteredImages);
+    this.updateGallery(this.filteredImages);
+    this.assignIndexes();
   }
 
   @HostListener('document:keydown', ['$event'])
