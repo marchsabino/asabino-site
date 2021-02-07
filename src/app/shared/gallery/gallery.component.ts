@@ -13,7 +13,7 @@ import {
 })
 export class GalleryComponent implements OnInit {
   filterType = FilterType;
-  currentFilter = FilterType.ALL;
+  currentFilter = FilterType.MIXED;
   currentImage = null;
   previousImage = 0;
   nextImage = 0;
@@ -31,16 +31,88 @@ export class GalleryComponent implements OnInit {
       caption: 'A porch that was painted',
     },
     { tag: FilterType.PAINTING, src: '../../../assets/images/carousel-2.jpg' },
-    { tag: FilterType.CARPENTRY, src: '../../../assets/images/carousel-2.jpg' },
-    { tag: FilterType.CARPENTRY, src: '../../../assets/images/carousel-1.jpg' },
-    { tag: FilterType.CARPENTRY, src: '../../../assets/images/carousel-3.jpg' },
-    { tag: FilterType.CARPENTRY, src: '../../../assets/images/carousel-2.jpg' },
-    { tag: FilterType.CARPENTRY, src: '../../../assets/images/carousel-3.jpg' },
-    { tag: FilterType.CARPENTRY, src: '../../../assets/images/carousel-1.jpg' },
     { tag: FilterType.PAINTING, src: '../../../assets/images/carousel-3.jpg' },
     { tag: FilterType.PAINTING, src: '../../../assets/images/carousel-1.jpg' },
     { tag: FilterType.PAINTING, src: '../../../assets/images/carousel-2.jpg' },
     { tag: FilterType.PAINTING, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.PAINTING, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.PAINTING, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.PAINTING, src: '../../../assets/images/carousel-2.jpg' },
+    { tag: FilterType.PAINTING, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.PAINTING, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.PAINTING, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.TILE, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.TILE, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.TILE, src: '../../../assets/images/carousel-2.jpg' },
+    { tag: FilterType.TILE, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.TILE, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.TILE, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.TILE, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.TILE, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.TILE, src: '../../../assets/images/carousel-2.jpg' },
+    { tag: FilterType.TILE, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.TILE, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.TILE, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.CARPENTRY, src: '../../../assets/images/carousel-2.jpg' },
+    { tag: FilterType.CARPENTRY, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.CARPENTRY, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.CARPENTRY, src: '../../../assets/images/carousel-2.jpg' },
+    { tag: FilterType.CARPENTRY, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.CARPENTRY, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.CARPENTRY, src: '../../../assets/images/carousel-2.jpg' },
+    { tag: FilterType.CARPENTRY, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.CARPENTRY, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.CARPENTRY, src: '../../../assets/images/carousel-2.jpg' },
+    { tag: FilterType.CARPENTRY, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.CARPENTRY, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.BATHROOMS, src: '../../../assets/images/carousel-2.jpg' },
+    { tag: FilterType.BATHROOMS, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.BATHROOMS, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.BATHROOMS, src: '../../../assets/images/carousel-2.jpg' },
+    { tag: FilterType.BATHROOMS, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.BATHROOMS, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.BATHROOMS, src: '../../../assets/images/carousel-2.jpg' },
+    { tag: FilterType.BATHROOMS, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.BATHROOMS, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.BATHROOMS, src: '../../../assets/images/carousel-2.jpg' },
+    { tag: FilterType.BATHROOMS, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.BATHROOMS, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.KITCHENS, src: '../../../assets/images/carousel-2.jpg' },
+    { tag: FilterType.KITCHENS, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.KITCHENS, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.KITCHENS, src: '../../../assets/images/carousel-2.jpg' },
+    { tag: FilterType.KITCHENS, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.KITCHENS, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.KITCHENS, src: '../../../assets/images/carousel-2.jpg' },
+    { tag: FilterType.KITCHENS, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.KITCHENS, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.KITCHENS, src: '../../../assets/images/carousel-2.jpg' },
+    { tag: FilterType.KITCHENS, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.KITCHENS, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.DECKS, src: '../../../assets/images/carousel-2.jpg' },
+    { tag: FilterType.DECKS, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.DECKS, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.DECKS, src: '../../../assets/images/carousel-2.jpg' },
+    { tag: FilterType.DECKS, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.DECKS, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.DECKS, src: '../../../assets/images/carousel-2.jpg' },
+    { tag: FilterType.DECKS, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.DECKS, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.DECKS, src: '../../../assets/images/carousel-2.jpg' },
+    { tag: FilterType.DECKS, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.DECKS, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.BASEMENTS, src: '../../../assets/images/carousel-2.jpg' },
+    { tag: FilterType.BASEMENTS, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.BASEMENTS, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.BASEMENTS, src: '../../../assets/images/carousel-2.jpg' },
+    { tag: FilterType.BASEMENTS, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.BASEMENTS, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.BASEMENTS, src: '../../../assets/images/carousel-2.jpg' },
+    { tag: FilterType.BASEMENTS, src: '../../../assets/images/carousel-1.jpg' },
+    { tag: FilterType.BASEMENTS, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.BASEMENTS, src: '../../../assets/images/carousel-2.jpg' },
+    { tag: FilterType.BASEMENTS, src: '../../../assets/images/carousel-3.jpg' },
+    { tag: FilterType.BASEMENTS, src: '../../../assets/images/carousel-1.jpg' },
   ];
   filteredImages: GalleryImage[];
 
@@ -101,7 +173,7 @@ export class GalleryComponent implements OnInit {
 
   filter(type: FilterType): void {
     this.filteredImages = this.images.filter((t) => {
-      return t.tag === type || type == FilterType.ALL;
+      return t.tag === type || type == FilterType.MIXED;
     });
     this.currentFilter = type;
     this.updateGallery(this.filteredImages);
@@ -138,7 +210,7 @@ interface Gallery {
 }
 
 enum FilterType {
-  ALL = 'All',
+  MIXED = 'Mixed',
   PAINTING = 'Painting',
   TILE = 'Tile',
   CARPENTRY = 'Carpentry',

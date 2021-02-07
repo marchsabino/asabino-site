@@ -9,6 +9,10 @@
     .nav-link {
       color: color.$theme;
 
+      &:hover {
+        cursor: pointer;
+      }
+
       &.active {
         color: white;
         background: color.$theme;
